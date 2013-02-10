@@ -75,7 +75,7 @@ class ConstantAccess  extends DataAccess\ConstantsData implements
      */
     private function isArrayMulti($aVal = null)
     {
-        if(!is_array($aVal))
+        if(!is_array($aVal) || empty($aVal))
             return false;
 
         $rv = array_filter($aVal,'is_array');
