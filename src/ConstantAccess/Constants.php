@@ -6,7 +6,7 @@
 spl_autoload_register (function ($class) {
     $sVendorDir = dirname(__DIR__);
     $file = str_replace ('\\', DIRECTORY_SEPARATOR, ltrim ($class, '\\')) . '.php';
-    if ($sVendorDir . DIRECTORY_SEPARATOR . $file)
+    if (file_exists($sVendorDir . DIRECTORY_SEPARATOR . $file))
     {
         require_once($sVendorDir .DIRECTORY_SEPARATOR .$file);
         return true;

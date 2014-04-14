@@ -10,12 +10,13 @@ class ConstantAccessTest extends PHPUnit_Framework_TestCase
         //$this->oConstantAccess = new ConstantAccess\ConstantAccess;
     }
 
+    /*
     public function testConstantsObjectIsCountable()
     {
         $this->oConstantAccess->ConstTrial = 23;
-        // assertCount to 1 would work here because only 1 constant has been defined with the oConstantAccess object
         $this->assertCount(1, $this->oConstantAccess);
     }
+    */
 
     public function testConstantsDefinedByArray()
     {
