@@ -6,7 +6,7 @@ php:
   - hhvm
 
 
-script: phpunit ./
+script: phpunit 
 
 matrix:
   allow_failures:
