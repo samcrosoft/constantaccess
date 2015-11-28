@@ -10,11 +10,8 @@ This library makes it possible to create and read (access) constants using an ar
 ## Example
 Create an object of the constant access library and then start creating or reading constants
 <pre>
-$oConst = new ConstantAccess\ConstantAccess();
+$oConst = new Samcrosoft\ConstantAccess\ConstantAccess();
 
-or
-
-$oConst = new Constants;
 </pre>
 
 <br/>
@@ -32,7 +29,7 @@ e.g
 
  // then create it now as
 
- $oConst = new Constants($aData);
+ $oConst = new Samcrosoft\ConstantAccess\ConstantAccess($aData);
 </pre>
 
 <br/>
@@ -65,7 +62,7 @@ You can enable the exceptions in two(2) ways,
 
  **e.g**
  <pre>
- 1 - $oConst = new Constant(array(), true);
+ 1 - $oConst = new Samcrosoft\ConstantAccess\ConstantAccess(array(), true);
  2 - $oConst->setThrowException(false);
  </pre>
 
