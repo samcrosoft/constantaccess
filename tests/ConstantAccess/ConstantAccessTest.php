@@ -1,13 +1,25 @@
 <?php
+namespace Samcrosoft\ConstantAccessTest;
+use ArrayAccess;
+use Countable;
+use PHPUnit_Framework_TestCase;
+use Samcrosoft\ConstantAccess\ConstantAccess;
+use Samcrosoft\ConstantAccess\Data\ConstantsData;
+
+/**
+ * Class ConstantAccessTest
+ * @package Samcrosoft\ConstantAccessTest
+ */
 class ConstantAccessTest extends PHPUnit_Framework_TestCase
 {
+    /**
+     * @var null|ConstantAccess
+     */
     protected $oConstantAccess = null;
 
     protected function setUp()
     {
-        $this->oConstantAccess = new Constants;
-        //or
-        //$this->oConstantAccess = new ConstantAccess\ConstantAccess;
+        $this->oConstantAccess = new ConstantAccess();
     }
 
     /*
@@ -24,7 +36,7 @@ class ConstantAccessTest extends PHPUnit_Framework_TestCase
                         'CONST1'=>1,
                         'CONST2'=>2
                       );
-        $this->oConstantAccess = new \ConstantAccess\ConstantAccess($aTest);
+        $this->oConstantAccess = new ConstantAccess($aTest);
         $this->assertTrue(defined('CONST1'), 'Constants [CONST1] has not been defined');
         $this->assertEquals(constant('CONST1'), 1);
         $this->assertTrue(defined('CONST2'), 'Constants [CONST2] has not been defined');
@@ -41,14 +53,14 @@ class ConstantAccessTest extends PHPUnit_Framework_TestCase
 
     public function testIfThrowExceptionOnWrongValue()
     {
-        $this->setExpectedException('ConstantAccess\Exceptions\ConstantsException', ConstantAccess\Data\ConstantsData::EXCEPTION_MESSAGE_INVALID_VALUE);
+        $this->setExpectedException('Samcrosoft\ConstantAccess\Exceptions\ConstantsException', ConstantsData::EXCEPTION_MESSAGE_INVALID_VALUE);
         $this->oConstantAccess->setThrowException(true);
         $this->oConstantAccess->testConstant = array();
     }
 
     public function testConstantsAccessImplementsNecessaryClasses()
     {
-        $this->assertTrue($this->oConstantAccess instanceof ConstantAccess\Data\ConstantsData);
+        $this->assertTrue($this->oConstantAccess instanceof ConstantsData);
         $this->assertTrue($this->oConstantAccess instanceof Countable);
         $this->assertTrue($this->oConstantAccess instanceof ArrayAccess);
 

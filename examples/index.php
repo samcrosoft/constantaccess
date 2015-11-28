@@ -1,8 +1,10 @@
 <?php
-include(__DIR__ . "/../src/ConstantAccess/Constants.php");
+use Samcrosoft\ConstantAccess\ConstantAccess;
+
+include(__DIR__ . "/../vendor/autoload.php");
 
 // create a new constant access object using the namespace
-$oConst = new ConstantAccess\ConstantAccess();
+$oConst = new ConstantAccess();
 
 $oConst['CONST1'] = "Example 1";
 $oConst['CONST2'] = "Example 2";
@@ -17,8 +19,8 @@ print "-------------------------------\n";
 
 unset($oConst);
 
-// create a new constant access object using the Constants class alias
-$oConst = new Constants;
+// example two
+$oConst = new ConstantAccess();
 $oConst['CONST3'] = "Example 3";
 
 print "the example of another string {$oConst['CONST3']}";

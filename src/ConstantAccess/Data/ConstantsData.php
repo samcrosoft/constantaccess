@@ -1,6 +1,10 @@
 <?php
-namespace ConstantAccess\Data;
+namespace Samcrosoft\ConstantAccess\Data;
 
+/**
+ * Class ConstantsData
+ * @package Samrosoft\ConstantAccess\Data
+ */
 class ConstantsData {
 	
 	const CONSTANTS_USER_CATEGORY 			= "CONSTANTS_USER_CATEGORY";
