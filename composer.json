@@ -1,0 +1,31 @@
+{
+  "name": "samcrosoft/constantaccess",
+  "description": "This library makes it possible to create and read (access) constants using an array-like object or a typical class object to make it possible to use constants in strings without the need of concatenation of strings",
+  "version": "2.0",
+  "keywords": [
+    "constant",
+    "constantaccess",
+    "arrayaccess",
+    "constants"
+  ],
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Samcrosoft\\ConstantAccess\\": "src/ConstantAccess",
+      "Samcrosoft\\ConstantAccessTest\\": "tests/ConstantAccess"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "samcrosoft",
+      "email": "samcrosoft@gmail.com",
+      "role": "Lead Developer"
+    }
+  ]
+}
